@@ -50,7 +50,11 @@
       background: repeating-linear-gradient(#fff 0, #fff 6.5mm, #bbb 6.5mm, #bbb 6.7mm) !important;
     }
     table.grid th, table.grid td { font-size: 8pt; }
-    .fig svg { height: 34mm; }
+    .qbox { padding-top: 1.6mm; margin-top: 1.6mm; border-top: .4pt solid #bbb; break-inside: avoid; }
+    .qno { font-size: 8.5pt; padding: 0 2mm; margin-right: 1.5mm; }
+    .qtitle { margin: 0 0 1mm; }
+    .fig { margin: 2mm 0; padding: 1mm; }
+    .fig svg { height: 30mm; }
   }
 </style>
 </head>
@@ -179,10 +183,10 @@
         { type: "choice", fig: "dist", q: "그림은 <b>A 와 B</b> 두 물체의 시간-이동 거리 그래프입니다. 더 빠른 물체는 어느 쪽일까요?",
           opts: ["<b>A</b>", "B", "둘이 같다"], ans: 0,
           why: "<b>A</b> 입니다. 같은 시간 동안 <b>더 멀리</b> 가고, 그래프가 <b>더 가파릅니다.</b>" },
-        { type: "num", fig: "dist", q: "그림에서 <b>A</b> 의 속력은 몇 m/s 인가요? (5 초 때 이동 거리를 읽어 보세요)",
+        { type: "num", q: "위 그림에서 <b>A</b> 의 속력은 몇 m/s 인가요? (5 초 때 이동 거리를 읽어 보세요)",
           unit: "m/s", ans: 4, tol: 0.05,
           why: "<b>4 m/s</b> 입니다. 5초 동안 20 m 를 갔으니 20 m ÷ 5 s = 4 m/s." },
-        { type: "num", fig: "dist", q: "그림에서 <b>B</b> 의 속력은 몇 m/s 인가요?",
+        { type: "num", q: "위 그림에서 <b>B</b> 의 속력은 몇 m/s 인가요?",
           unit: "m/s", ans: 2, tol: 0.05,
           why: "<b>2 m/s</b> 입니다. 5초 동안 10 m 를 갔으니 10 m ÷ 5 s = 2 m/s." },
         { type: "ox", q: "시간-이동 거리 그래프가 <b>더 가파를수록</b> 물체는 더 빠르다.", ans: true,
@@ -200,7 +204,7 @@
         { type: "num", fig: "speed", q: "그림의 시간-속력 그래프에서 이 물체의 <b>속력</b>은 몇 m/s 인가요?",
           unit: "m/s", ans: 4, tol: 0.05,
           why: "<b>4 m/s</b> 입니다. 수평선이 4 m/s 눈금에 놓여 있어요." },
-        { type: "num", fig: "speed", q: "이 물체가 <b>5 초</b> 동안 이동한 거리는 몇 m 일까요? " +
+        { type: "num", q: "위 그림의 물체가 <b>5 초</b> 동안 이동한 거리는 몇 m 일까요? " +
                "<em>(색칠한 직사각형의 가로(시간) × 세로(속력))</em>",
           unit: "m", ans: 20, tol: 0.1,
           why: "<b>20 m</b> 입니다. 4 m/s × 5 s = 20 m." },
