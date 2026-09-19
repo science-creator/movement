@@ -51,6 +51,32 @@ Desktop\김미란 교수학습-평가계획서\2026. 거제중 3학년 과학과
 관찰 시간 0~10 s · 트랙 0~100 m · 속력 0.5~10 m/s(0.5 단위) ·
 점점 빨라짐 `d = ½t²`(v = t) · 점점 느려짐 `d = 10t − ½t²`(v = 10 − t) · 비교용 등속 5 m/s.
 
+### 🌐 배포 — GitHub Pages (2026-09-19 부터)
+
+**학생은 GitHub 를 만지지 않는다. 주소 하나만 받는다.**
+
+| 무엇 | 값 |
+|---|---|
+| 저장소 | https://github.com/science-creator/movement (**공개**) |
+| 실험실 | https://science-creator.github.io/movement/ |
+| 학습지 | https://science-creator.github.io/movement/worksheet.html |
+| 선생님용 | https://science-creator.github.io/movement/teacher.html |
+| 정답지 | https://science-creator.github.io/movement/worksheet.html?key |
+
+> ⚠ 저장소가 공개라 **정답지 주소를 아는 사람은 누구나 정답을 본다.** 학생에게는 알리지 않는다(다른 앱도 같다).
+> ⚠ 학습지는 선생님 검토 전이다. 학생에게 주소를 알리는 것은 검토 뒤에.
+
+빌드가 없고 외부 의존성이 0개라 저장소의 파일이 그대로 웹 주소가 된다(`server.py` 는 로컬 확인용).
+Pages 설정은 Source `Deploy from a branch` · `main` · `/ (root)`.
+
+#### 고친 것을 반영하는 방법
+
+```bash
+git add .
+git commit -m "무엇을 고쳤는지 한 줄"
+git push
+```
+
 ## ② 기능 목록
 
 | 파일 | 설명 |
@@ -119,7 +145,7 @@ PDF **파일을 열어 눈으로 확인** · `file://` 더블클릭 · 태블릿
 - [ ] 인쇄해서 쪽 수 확인 (안 맞으면 `worksheet.html` 인쇄 CSS 의 `.fig svg` 높이 조정)
 - [ ] 이어서 : 자유 낙하(속력이 일정하게 커짐)를 이 앱의 **점점 빨라짐**과 잇는 장면 —
       `EnergyKeeper` 의 「다음 할 일」과 만난다
-- [ ] GitHub Pages 켜기 여부 (다른 앱은 켠 것도 있고 아닌 것도 있다 — 선생님께 확인)
+- [x] GitHub 공개 + Pages 배포 (2026-09-19) — 세 주소가 열리고 배포본에서 동작하는 것까지 확인함
 
 ## 코드 메모
 - **모든 그림은 `Movement.dist / speed` 에서 나온다.** 그림 안에 숫자를 손으로 적지 말 것.
